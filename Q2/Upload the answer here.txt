@@ -1,32 +1,42 @@
-import java.util.Scanner;
-
-    public class IT24102655Lab7Q3 {
+public class IT24102655Lab7Q2A {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Customer " + i);
-            System.out.print("Enter total bill amount: ");
-            double totalBill = scan.nextDouble();
-            
-            System.out.print("Enter mode of payment (C for cash, O for other): ");
-            char paymentMode = scan.next().charAt(0);
-            
-            if (paymentMode == 'C' || paymentMode == 'c') {
-                double discount = totalBill * 0.05;
-                double amountToPay = totalBill - discount;
-                System.out.println("Discount is: " + discount);
-                System.out.println("Amount to be paid: " + amountToPay);
-            } else if (paymentMode == 'O' || paymentMode == 'o') {
-                System.out.println("No discount applicable");
-                System.out.println("Amount to be paid: " + totalBill);
-            } else {
-                System.out.println("Payment Mode is Not Valid");
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print("$ ");
             }
-            
-            System.out.println();  // Move to the next line
+            System.out.println();
         }
-        
-        scan.close();
+    }
+}
+
+
+
+
+
+
+
+public class IT24102655Lab7Q2B {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + " - ");
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+public class IT24102655Lab7Q2C {
+    public static void main(String[] args) {
+        for (int i = 5; i >= 1; i--) {
+            for (int j = i; j >= 1; j--) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
     }
 }
