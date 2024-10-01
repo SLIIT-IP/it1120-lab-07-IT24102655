@@ -1,1 +1,33 @@
-Upload the answer here
+import java.util.Scanner;
+
+public class IT24102655Lab7Q1A {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double totalMarks = 0;
+        int numSubjects = 4;
+
+        // Loop to input marks for four subjects
+        int i;
+        for (i = 1; i <= 4; i++) {
+            System.out.print("Enter Subject Mark " + i + ": ");
+            double mark = scan.nextDouble();
+            totalMarks += mark;  // total marks
+        }
+
+        System.out.println("\n");  // Move to the next line
+
+        // Calculate average
+        double average = totalMarks / 4;
+
+        System.out.println("Average is: " + average);
+
+       
+        // Determine grade
+        String grade;
+        if (average >= 75 && average <= 100) {
+            grade = "Distinction";
+        } else if (average >= 50 && average < 75) {
+            grade = "Credit";
+        } else {
+            grade = "Fail";
+        }
